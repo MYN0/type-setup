@@ -1,0 +1,14 @@
+{
+  "name": "typescript_project",
+  "version": "1.0.0",
+  "main": "source/dist/index.js",
+  "scripts": {
+    "start": "tsc --watch",
+    "dev": "",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "This is a auto generated package.json file using the typescript-setup"
+}
