@@ -44,7 +44,7 @@ const Done = () => {
           );
         } else {
           console.log(
-            `Successfully created the "public" file. Without getting any errors.`
+            `Successfully created the "public" folder. Without getting any errors.`
           );
         }
       }
@@ -59,13 +59,13 @@ const Done = () => {
           );
         } else {
           console.log(
-            `Successfully created the "dist" file. Without getting any errors.`
+            `Successfully created the "dist" folder. Without getting any errors.`
           );
         }
       }
     );
     fs?.mkdir(
-      path?.resolve(_directoryName, `source/typings`),
+      path?.resolve(_directoryName, `source/ts`),
       { recursive: true },
       (e) => {
         if (e) {
@@ -74,7 +74,7 @@ const Done = () => {
           );
         } else {
           console.log(
-            `Successfully created the "typings" file. Without getting any errors.`
+            `Successfully created the "ts" folder. Without getting any errors.`
           );
         }
       }
@@ -91,13 +91,6 @@ const Done = () => {
       if (e) {
       } else {
         console.log(`Created a js file in the dist folder.`);
-      }
-    });
-
-    fs.writeFileSync(`${_directoryName}/source/typings/index.d.ts`, ``, (e) => {
-      if (e) {
-      } else {
-        console.log(`Created a declaration file in the typings folder.`);
       }
     });
   };
