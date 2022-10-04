@@ -23,7 +23,10 @@ const Done = () => {
         console.log(e);
         console.error(`There is an error while downloading the dependencies.`);
       } else {
-        return console.info(stdOut);
+        console.info(stdOut);
+        console.log(
+          `When everything is done, use the command "npm start" to start up the project.`
+        );
       }
     });
     const t = JSON.stringify(tsConfigData, null, `\t`);
@@ -89,6 +92,10 @@ const Done = () => {
     });
     fs.writeFileSync(`${_directoryName}/source/dist/index.js`, ``, (e) => {
       if (e) {
+        console.info(
+          "There was an error while creating a js file in the dist folder,",
+          e
+        );
       } else {
         console.log(`Created a js file in the dist folder.`);
       }
